@@ -71,9 +71,12 @@ async function onSubmit(e){
     }
     drawElements(data.hits);
     onSuccess(data.totalHits);
-    // disableBtn();
-    enableBtn();
+    disableBtn();
+    // enableBtn();
     lightbox.refresh();
+    if(data.totalHits > 40){
+        enableBtn();
+    }
 }
 
 function disableBtn(){
